@@ -132,3 +132,21 @@ C:\Users\sebas\Desktop\BUSCAMINAS2.1\buscaminas\obj\Debug\buscaminas.vbproj.Copy
 C:\Users\sebas\Desktop\BUSCAMINAS2.1\buscaminas\obj\Debug\buscaminas.exe
 C:\Users\sebas\Desktop\BUSCAMINAS2.1\buscaminas\obj\Debug\buscaminas.xml
 C:\Users\sebas\Desktop\BUSCAMINAS2.1\buscaminas\obj\Debug\buscaminas.pdb
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\bin\Debug\buscaminas.exe.config
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\bin\Debug\buscaminas.exe
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\bin\Debug\buscaminas.pdb
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\bin\Debug\buscaminas.xml
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\bin\Debug\ClasesBM.dll
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\bin\Debug\ClasesBM.pdb
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\bin\Debug\ClasesBM.xml
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\obj\Debug\buscaminas.vbproj.AssemblyReference.cache
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\obj\Debug\buscaminas.vbproj.SuggestedBindingRedirects.cache
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\obj\Debug\buscaminas.Form1.resources
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\obj\Debug\buscaminas.Form2.resources
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\obj\Debug\buscaminas.Resources.resources
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\obj\Debug\buscaminas.vbproj.GenerateResource.cache
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\obj\Debug\buscaminas.vbproj.CoreCompileInputs.cache
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\obj\Debug\buscaminas.vbproj.CopyComplete
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\obj\Debug\buscaminas.exe
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\obj\Debug\buscaminas.xml
+G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\buscaminas\obj\Debug\buscaminas.pdb

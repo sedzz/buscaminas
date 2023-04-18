@@ -1,5 +1,5 @@
 ﻿Imports ClasesBM
-
+' todo María: Cambiar los nombres de los formularios a FrmQueHace
 Public Class Form2
     Private Sub boton_click(sender As Object, e As EventArgs) Handles btnFacil.Click, btnMedio.Click, btnDificil.Click
         Dim boton As Button = TryCast(sender, Button)
@@ -17,6 +17,6 @@ Public Class Form2
         End Select
         Form1.Activate()
         Form1.Show()
-        Me.Hide()
+        Me.Hide() ' todo María: Para qué ocultarlo? Luego deberá volver o si no es así, cerrarlo
     End Sub
 End Class

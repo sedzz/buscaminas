@@ -35,7 +35,7 @@ Public Class Form1
         BombasGeneradas = True
 
         If boton.Text = "x" Then
-            Dim imagePath As String = "../../imagenes/bus.png"
+            Dim imagePath As String = "../../imagenes/bus.png" ' todo María: Esto queda pendiente, ya os contaré más tarde donde deben ir las imágenes....
             Dim Image As Image = Image.FromFile(imagePath)
             boton.Image = Image
 
@@ -54,14 +54,14 @@ Public Class Form1
 
 
 
-    Function ZonaSegura(boton As Button)
+    Function ZonaSegura(boton As Button) ' todo María: No es una función si no devuelve nada. Tenéis otras igual
         Dim contador As Integer = 3
         Dim posicionX, posicionY As Integer
 
         Do Until boton.Name.ElementAt(contador).ToString = "_" OrElse boton.Name.ElementAt(5).ToString = ""
 
             posicionX = boton.Name.ElementAt(contador).ToString
-            posicionY = boton.Name.ElementAt(5).ToString
+            posicionY = boton.Name.ElementAt(5).ToString ' todo María: Se rompe en difícil
             contador += 1
 
         Loop
