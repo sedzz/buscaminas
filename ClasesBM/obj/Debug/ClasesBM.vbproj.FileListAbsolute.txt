@@ -38,3 +38,13 @@ C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\obj\Debu
 C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\obj\Debug\ClasesBM.dll
 C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\obj\Debug\ClasesBM.xml
 C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\obj\Debug\ClasesBM.pdb
+C:\Users\sebas\Source\Repos\buscaminas\ClasesBM\bin\Debug\ClasesBM.dll
+C:\Users\sebas\Source\Repos\buscaminas\ClasesBM\bin\Debug\ClasesBM.pdb
+C:\Users\sebas\Source\Repos\buscaminas\ClasesBM\bin\Debug\ClasesBM.xml
+C:\Users\sebas\Source\Repos\buscaminas\ClasesBM\obj\Debug\ClasesBM.vbproj.AssemblyReference.cache
+C:\Users\sebas\Source\Repos\buscaminas\ClasesBM\obj\Debug\ClasesBM.Resources.resources
+C:\Users\sebas\Source\Repos\buscaminas\ClasesBM\obj\Debug\ClasesBM.vbproj.GenerateResource.cache
+C:\Users\sebas\Source\Repos\buscaminas\ClasesBM\obj\Debug\ClasesBM.vbproj.CoreCompileInputs.cache
+C:\Users\sebas\Source\Repos\buscaminas\ClasesBM\obj\Debug\ClasesBM.dll
+C:\Users\sebas\Source\Repos\buscaminas\ClasesBM\obj\Debug\ClasesBM.xml
+C:\Users\sebas\Source\Repos\buscaminas\ClasesBM\obj\Debug\ClasesBM.pdb

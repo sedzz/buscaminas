@@ -1,6 +1,6 @@
 ﻿Imports System.CodeDom
 
-Public Class Form1
+Public Class FrmTablero
     Public matriz(dificultad.PosX, dificultad.PosY) As Button
     Private posicionDeBombas(dificultad.Bombas - 1) As String
     Private posicionesDeZonaSegura(9) As String
@@ -52,7 +52,10 @@ Public Class Form1
 
     End Sub
 
-
+    Function SacarPosicion(boton As Button, quieresY As Boolean) As Integer
+        If quieresY Then Return boton.Text.Substring(6)
+        Return boton.Text.Substring(3, 4)
+    End Function
 
     Sub ZonaSegura(boton As Button)
         Dim posicionParaLaPosicionX As Integer = boton.Name.LastIndexOf("n") + 1
