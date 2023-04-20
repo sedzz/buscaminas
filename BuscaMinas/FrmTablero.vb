@@ -7,6 +7,8 @@ Public Class FrmTablero
     Dim x As Integer = 0
     Dim y As Integer = 0
     Private BombasGeneradas As Boolean = False
+    Dim totalBombas As List(Of Button) = New List(Of Button)
+
 
     Private Sub Form1_Show(sender As Object, e As EventArgs) Handles MyBase.Load
         CrearTablero()
@@ -14,7 +16,7 @@ Public Class FrmTablero
     Private Sub Boton_Click(sender As Object, e As EventArgs)
         Dim boton As Button = TryCast(sender, Button)
         Dim rnd As New Random
-        Dim posicionX, posicionY, posicionMenosX, posicionMenosY As Integer
+        Dim posicionX, posicionY As Integer
 
         If TypeOf boton Is Button And BombasGeneradas = False Then
             ZonaSegura(boton)
@@ -23,13 +25,16 @@ Public Class FrmTablero
                 posicionY = rnd.Next(dificultad.PosY)
                 If Not posicionDeBombas.Contains(posicionX & posicionY) AndAlso Not posicionesDeZonaSegura.Contains(posicionX & posicionY) AndAlso Not $"btn{posicionX}_{posicionY}".Equals(boton.Name) Then
                     matriz(posicionX, posicionY).Text = "x"
+                    totalBombas.Add(matriz(posicionX, posicionY))
                     posicionDeBombas(i) = posicionX & posicionY
-                    matriz(posicionMenosX, posicionMenosY).Tag = "bomba"
+                    matriz(posicionX, posicionY).Tag = "bomba"
+
                 Else
                     i -= 1
                 End If
-            Next
 
+            Next
+            Numeros()
         End If
 
         BombasGeneradas = True
@@ -48,14 +53,49 @@ Public Class FrmTablero
             Next
         End If
 
+    End Sub
 
+    Function SacarPosicion(boton As Button, quieresX As Boolean) As Integer
+        If quieresX Then Return boton.Name.Substring(3, 2)
+        Return boton.Name.Substring(6)
+    End Function
+
+    Sub Numeros()
+        Dim posicionX As Integer
+        Dim posicionY As Integer
+
+        For i = 0 To totalBombas.Count - 1
+            For x = SacarPosicion(totalBombas(i), True) - 1 To SacarPosicion(totalBombas(i), False) + 1
+                posicionX = SacarPosicion(totalBombas(i), True)
+                posicionY = SacarPosicion(totalBombas(i), False)
+                If matriz(posicionX, posicionY - 1).Tag <> "bomba" Then
+                    matriz(posicionX, posicionY + 1).Tag += 1
+                End If
+                If matriz(posicionX - 1, posicionY - 1).Tag <> "bomba" Then
+                    matriz(posicionX - 1, posicionY).Tag = "1"
+                End If
+                If matriz(posicionX - 1, posicionY + 1).Tag <> "bomba" Then
+                    matriz(posicionX - 1, posicionY).Tag += 1
+                End If
+                If matriz(posicionX - 1, posicionY).Tag <> "bomba" Then ''''
+                    matriz(posicionX - 1, posicionY).Tag += 1
+                End If
+                If matriz(posicionX + 1, posicionY + 1).Tag <> "bomba" Then ''''
+                    matriz(posicionX - 1, posicionY).Tag += 1
+                End If
+                If matriz(posicionX + 1, posicionY).Tag <> "bomba" Then '''''
+                    matriz(posicionX - 1, posicionY).Tag += 1
+                End If
+                If matriz(posicionX + 1, posicionY - 1).Tag <> "bomba" Then
+                    matriz(posicionX - 1, posicionY).Tag += 1
+                End If
+
+            Next
+        Next
 
     End Sub
 
-    Function SacarPosicion(boton As Button, quieresY As Boolean) As Integer
-        If quieresY Then Return boton.Text.Substring(6)
-        Return boton.Text.Substring(3, 4)
-    End Function
+
 
     Sub ZonaSegura(boton As Button)
         Dim posicionParaLaPosicionX As Integer = boton.Name.LastIndexOf("n") + 1
@@ -85,7 +125,7 @@ Public Class FrmTablero
         For x As Integer = posicionX - 1 To posicionX + 1
             For y As Integer = posicionY - 1 To posicionY + 1
                 If Not (x = -1 OrElse y = -1) Then
-                    matriz(x, y).Visible = False
+                    matriz(x, y).Enabled = False
                     posicionesDeZonaSegura(posicionParaLaPosicionX) = x & y
                     posicionParaLaPosicionX += 1
                 End If
@@ -109,6 +149,7 @@ Public Class FrmTablero
                 y += matriz(i, j).Size.Height
                 Controls.Add(matriz(i, j))
                 AddHandler matriz(i, j).Click, AddressOf Boton_Click
+                'matriz(i, j).Tag = ""
             Next j
             x += 30
             y = 0
