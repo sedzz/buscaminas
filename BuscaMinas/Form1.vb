@@ -54,42 +54,53 @@ Public Class Form1
 
 
 
-    Function ZonaSegura(boton As Button) ' todo María: No es una función si no devuelve nada. Tenéis otras igual
-        Dim contador As Integer = 3
+    Sub ZonaSegura(boton As Button)
+        Dim posicionParaLaPosicionX As Integer = boton.Name.LastIndexOf("n") + 1
+        Dim posicionParaLaPosicionY As Integer = 6
         Dim posicionX, posicionY As Integer
+        Dim comprobador As Boolean = True
+        Dim cambiarOrden As String
 
-        Do Until boton.Name.ElementAt(contador).ToString = "_" OrElse boton.Name.ElementAt(5).ToString = ""
 
-            posicionX = boton.Name.ElementAt(contador).ToString
-            posicionY = boton.Name.ElementAt(5).ToString ' todo María: Se rompe en difícil
-            contador += 1
+        Do Until comprobador = False
+
+            If Not boton.Name.ElementAt(posicionParaLaPosicionX).ToString = "_" Then
+                posicionX = posicionX & boton.Name.ElementAt(posicionParaLaPosicionX).ToString
+                posicionParaLaPosicionX += 1
+            ElseIf posicionParaLaPosicionY <> 8 Then
+                posicionY = posicionY & boton.Name.ElementAt(posicionParaLaPosicionY).ToString
+                posicionParaLaPosicionY += 1
+            Else
+                comprobador = False
+            End If
 
         Loop
 
 
-        contador = 0
+        posicionParaLaPosicionX = 0
 
         For x As Integer = posicionX - 1 To posicionX + 1
             For y As Integer = posicionY - 1 To posicionY + 1
                 If Not (x = -1 OrElse y = -1) Then
                     matriz(x, y).Visible = False
-                    posicionesDeZonaSegura(contador) = x & y
-                    contador += 1
+                    posicionesDeZonaSegura(posicionParaLaPosicionX) = x & y
+                    posicionParaLaPosicionX += 1
                 End If
             Next
         Next
 
+    End Sub
 
-
-    End Function
-
-    Function CrearTablero()
+    Sub CrearTablero()
         For i = 0 To dificultad.PosX - 1 'Recorre las filas
 
             For j = 0 To dificultad.PosY - 1 'Recorre las columnas
                 Dim btn As New Button
                 matriz(i, j) = btn
-                btn.Name = $"btn{i}_{j}"
+                If i > 10 And j > 10 Then btn.Name = $"btn{i}_{j}"
+                If i < 10 Then btn.Name = $"btn0{i}_{j}"
+                If j < 10 Then btn.Name = $"btn{i}_0{j}"
+                If i < 10 And j < 10 Then btn.Name = $"btn0{i}_0{j}"
                 matriz(i, j).Size = New Size(30, 30)
                 matriz(i, j).Location = New Point(x, y)
                 y += matriz(i, j).Size.Height
@@ -99,5 +110,5 @@ Public Class Form1
             x += 30
             y = 0
         Next i
-    End Function
+    End Sub
 End Class

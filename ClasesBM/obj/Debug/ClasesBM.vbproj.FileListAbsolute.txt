@@ -28,3 +28,13 @@ G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexF
 G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\ClasesBM\obj\Debug\ClasesBM.dll
 G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\ClasesBM\obj\Debug\ClasesBM.xml
 G:\Mi unidad\Modulos\1DamProgramacion\00 Alumnado\Proyectos Finales\G3SebasAlexFran\ClasesBM\obj\Debug\ClasesBM.pdb
+C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\bin\Debug\ClasesBM.dll
+C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\bin\Debug\ClasesBM.pdb
+C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\bin\Debug\ClasesBM.xml
+C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\obj\Debug\ClasesBM.vbproj.AssemblyReference.cache
+C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\obj\Debug\ClasesBM.Resources.resources
+C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\obj\Debug\ClasesBM.vbproj.GenerateResource.cache
+C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\obj\Debug\ClasesBM.vbproj.CoreCompileInputs.cache
+C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\obj\Debug\ClasesBM.dll
+C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\obj\Debug\ClasesBM.xml
+C:\Users\Francesco\Escritorio\repositorioBuscaminas\buscaminas\ClasesBM\obj\Debug\ClasesBM.pdb
