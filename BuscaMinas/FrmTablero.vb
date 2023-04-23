@@ -13,37 +13,6 @@ Public Class FrmTablero
 
     Private Sub Form1_Show(sender As Object, e As EventArgs) Handles MyBase.Load
         CrearTablero()
-
-        'Dim rnd As New Random
-        'Dim posicionX, posicionY As Integer
-
-        'For k = 0 To dificultad.Bombas - 1
-        '    posicionX = rnd.Next(dificultad.PosX)
-        '    posicionY = rnd.Next(dificultad.PosY)
-        '    If Not totalBombas.Contains(matriz(posicionX, posicionY)) Then
-        '        matriz(posicionX, posicionY).Tag = -1
-        '        totalBombas.Add(matriz(posicionX, posicionY))
-        '    Else
-        '        k -= 1
-        '    End If
-
-        'Next
-
-        For i = 0 To dificultad.PosX - 1
-            For j = 0 To dificultad.PosY - 1
-                If matriz(i, j).Tag = 0 Then
-                    matriz(i, j).Text = 0
-                Else
-                    matriz(i, j).Text = -1
-                End If
-            Next
-        Next
-
-
-
-
-
-
     End Sub
     Private Sub Boton_Click(sender As Object, e As EventArgs)
         Dim boton As Button = TryCast(sender, Button)
@@ -70,25 +39,33 @@ Public Class FrmTablero
 
         BombasGeneradas = True
         boton.Enabled = False
-        If boton.Tag = -1 Then
-            Dim imagePath As String = "../../imagenes/bus.png" ' todo María: Esto queda pendiente, ya os contaré más tarde donde deben ir las imágenes....
-            Dim Image As Image = Image.FromFile(imagePath)
-            boton.Image = Image
 
-            For i = 0 To dificultad.PosX - 1
-                For j = 0 To dificultad.PosY - 1
-                    If matriz(i, j).Tag = -1 Then
-                        matriz(i, j).Image = Image
-                    End If
+        Select Case boton.Tag
+            Case -1
+                Dim imagePath As String = "../../imagenes/bus.png" ' todo María: Esto queda pendiente, ya os contaré más tarde donde deben ir las imágenes....
+                Dim Image As Image = Image.FromFile(imagePath)
+                boton.Image = Image
+
+                For i = 0 To dificultad.PosX - 1
+                    For j = 0 To dificultad.PosY - 1
+                        If matriz(i, j).Tag = -1 Then
+                            matriz(i, j).Image = Image
+                        End If
+                    Next
                 Next
-            Next
+                MessageBox.Show("la cagaste")
+                Close()
+                FrmEleccionDificultad.Show()
+            Case 1
+                boton.BackColor = Color.Blue
+            Case 2
+                boton.BackColor = Color.Green
+            Case 3
+                boton.BackColor = Color.Red
+            Case 4
+                boton.BackColor = Color.DarkBlue
 
-
-            MessageBox.Show("la cagaste")
-            Close()
-            FrmEleccionDificultad.Show()
-        End If
-
+        End Select
 
         boton.Text = boton.Tag
 
@@ -110,7 +87,7 @@ Public Class FrmTablero
 
 
                         End If
-                        matriz(xP, yP).Text = matriz(xP, yP).Tag
+                        ' matriz(xP, yP).Text = matriz(xP, yP).Tag
                     End If
                 Next
 
@@ -120,7 +97,12 @@ Public Class FrmTablero
     End Sub
 
 
-
+    'Private Sub MarcarBandera(sender As Object, e As MouseEventArgs)
+    '    Dim boton As Button = TryCast(sender, Button)
+    '    If e.Button = Windows.Forms.MouseButtons.Right Then
+    '        boton.BackColor = Color.Black
+    '    End If
+    'End Sub
     Sub ZonaSegura(boton As Button)
         Dim posicionParaLaPosicionX As Integer = boton.Name.LastIndexOf("n") + 1
         Dim posicionParaLaPosicionY As Integer = 6
@@ -144,15 +126,17 @@ Public Class FrmTablero
 
 
         posicionParaLaPosicionX = 0
-
         For x As Integer = posicionX - 1 To posicionX + 1
             For y As Integer = posicionY - 1 To posicionY + 1
                 If Not (x = -1 OrElse y = -1) And Not (x = dificultad.PosX OrElse y = dificultad.PosY) Then
-                    matriz(x, y).Enabled = False
+
+                    'matriz(x, y).Enabled = False
+
+
                     posicionesDeZonaSegura(posicionParaLaPosicionX) = x & y
                     posicionParaLaPosicionX += 1
-
                 End If
+                matriz(x, y).Text = matriz(x, y).Tag
             Next
         Next
 
@@ -168,15 +152,13 @@ Public Class FrmTablero
                 If i < 10 Then matriz(i, j).Name = $"btn0{i}_{j}"
                 If j < 10 Then matriz(i, j).Name = $"btn{i}_0{j}"
                 If i < 10 And j < 10 Then matriz(i, j).Name = $"btn0{i}_0{j}"
-
                 matriz(i, j).Tag = 0
-
                 matriz(i, j).Size = New Size(50, 30)
                 matriz(i, j).Location = New Point(x, y)
                 y += matriz(i, j).Size.Height
                 Controls.Add(matriz(i, j))
                 AddHandler matriz(i, j).Click, AddressOf Boton_Click
-                matriz(i, j).Text = 0
+                'AddHandler matriz(i, j).MouseDown, AddressOf MarcarBandera
             Next j
             x += 50
             y = 0
