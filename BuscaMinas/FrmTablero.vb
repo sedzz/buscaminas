@@ -87,7 +87,6 @@ Public Class FrmTablero
 
 
                         End If
-                        ' matriz(xP, yP).Text = matriz(xP, yP).Tag
                     End If
                 Next
 
@@ -97,12 +96,16 @@ Public Class FrmTablero
     End Sub
 
 
-    'Private Sub MarcarBandera(sender As Object, e As MouseEventArgs)
-    '    Dim boton As Button = TryCast(sender, Button)
-    '    If e.Button = Windows.Forms.MouseButtons.Right Then
-    '        boton.BackColor = Color.Black
-    '    End If
-    'End Sub
+    Private Sub MarcarBandera(sender As Object, e As MouseEventArgs)
+        Dim boton As Button = TryCast(sender, Button)
+        If boton.BackColor = Color.Black Then
+            boton.BackColor = Color.Transparent
+            Exit Sub
+        End If
+        If e.Button = Windows.Forms.MouseButtons.Right Then
+            boton.BackColor = Color.Black
+        End If
+    End Sub
     Sub ZonaSegura(boton As Button)
         Dim posicionParaLaPosicionX As Integer = boton.Name.LastIndexOf("n") + 1
         Dim posicionParaLaPosicionY As Integer = 6
@@ -158,7 +161,7 @@ Public Class FrmTablero
                 y += matriz(i, j).Size.Height
                 Controls.Add(matriz(i, j))
                 AddHandler matriz(i, j).Click, AddressOf Boton_Click
-                'AddHandler matriz(i, j).MouseDown, AddressOf MarcarBandera
+                AddHandler matriz(i, j).MouseDown, AddressOf MarcarBandera
             Next j
             x += 50
             y = 0
