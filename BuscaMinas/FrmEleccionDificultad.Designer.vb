@@ -29,7 +29,7 @@ Partial Class FrmEleccionDificultad
         '
         'btnFacil
         '
-        Me.btnFacil.Location = New System.Drawing.Point(66, 200)
+        Me.btnFacil.Location = New System.Drawing.Point(130, 217)
         Me.btnFacil.Name = "btnFacil"
         Me.btnFacil.Size = New System.Drawing.Size(113, 55)
         Me.btnFacil.TabIndex = 0
@@ -38,7 +38,7 @@ Partial Class FrmEleccionDificultad
         '
         'btnMedio
         '
-        Me.btnMedio.Location = New System.Drawing.Point(236, 201)
+        Me.btnMedio.Location = New System.Drawing.Point(300, 218)
         Me.btnMedio.Name = "btnMedio"
         Me.btnMedio.Size = New System.Drawing.Size(110, 53)
         Me.btnMedio.TabIndex = 1
@@ -47,14 +47,14 @@ Partial Class FrmEleccionDificultad
         '
         'btnDificil
         '
-        Me.btnDificil.Location = New System.Drawing.Point(402, 197)
+        Me.btnDificil.Location = New System.Drawing.Point(466, 214)
         Me.btnDificil.Name = "btnDificil"
         Me.btnDificil.Size = New System.Drawing.Size(90, 56)
         Me.btnDificil.TabIndex = 2
         Me.btnDificil.Text = "dificil"
         Me.btnDificil.UseVisualStyleBackColor = True
         '
-        'Form2
+        'FrmEleccionDificultad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -62,7 +62,7 @@ Partial Class FrmEleccionDificultad
         Me.Controls.Add(Me.btnDificil)
         Me.Controls.Add(Me.btnMedio)
         Me.Controls.Add(Me.btnFacil)
-        Me.Name = "Form2"
+        Me.Name = "FrmEleccionDificultad"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
 
